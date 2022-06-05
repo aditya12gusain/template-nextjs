@@ -2,10 +2,11 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   *{
-    transition: all 250ms ease-in;
+    /* transition: all 100ms ease-in; */
     font-family: 'Poppins', sans-serif;
-    /* padding: 0;
-    margin: 0; */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box ;
     /* font-family: 'Bitter', serif;
     font-family: 'Poppins', sans-serif; */
   }
@@ -14,7 +15,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: ${props => props.theme.background}
+    background: ${props => props.theme.background};
+    color: ${props => props.theme.color};
   }
 
   .themeButton{
@@ -224,6 +226,21 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 0.05em;
   }
 
+  .bsSmall{
+    box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.12), 0 1px 2px hsla(0, 0%, 0%,0.24);
+  }
+  .bsMedium{
+    box-shadow: 0 3px 6px hsla(0, 0%, 0%, .15), 0 2px 4px hsla(0, 0%, 0%, .12);
+  }
+  .bsLarge{
+    box-shadow: 0 10px 20px hsla(0, 0%, 0%, .15), 0 3px 6px hsla(0, 0%, 0%, .10);
+  }
+  .bsXLarge{
+    box-shadow: 0 15px 25px hsla(0, 0%, 0%, .15), 0 5px 10px hsla(0, 0%, 0%, .5);
+  }
+  .bsXXLarge{
+    box-shadow: 0 20px 40px hsla(0, 0%, 0%, .2);
+  }
 `;
  
 export default GlobalStyle;

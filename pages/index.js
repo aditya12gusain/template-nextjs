@@ -2,9 +2,8 @@
 const Home = () => {
   return (
     <>
-      <button className='p1'>Something</button>
     </>
   )
 }
-Home.layout = "HomeLayout";
+Home.layout = "DashboardLayout";
 export default Home
