@@ -79,13 +79,8 @@ export const MenuItem = styled.a`
 
 
 export const DropdownContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     min-width: 100%;
     padding: 10px;
-    display: none;
     background: ${props => props.theme.subBackground};
     position: absolute;
     z-index: 999;
@@ -94,6 +89,9 @@ export const DropdownContainer = styled.div`
     transform: translateY(-50%);
     transition: all 300ms ease;
     border-radius: 5px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 `
 
 export const MenuItemDropdown = styled.div`
@@ -109,18 +107,22 @@ export const MenuItemDropdown = styled.div`
     border-radius: 4px;
     gap: 0.5rem;
     
-    :hover{
+    &:hover{
         background: ${props => props.theme.background}
     }
 
-    & ${DropdownContainer}:hover{
-        box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.12), 0 1px 2px hsla(0, 0%, 0%,0.24);
-    }
+    /* ${DropdownContainer}{
+        display: none;
+    } */
 
     &:hover ${DropdownContainer}{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    ${DropdownContainer}:hover{
+        box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.12), 0 1px 2px hsla(0, 0%, 0%, 0.24);
     }
 `
-
-
-// export const DropdownItem = styled.

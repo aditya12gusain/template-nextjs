@@ -3,6 +3,7 @@ import {ThemeProvider} from 'styled-components'
 import {light, dark} from '../styles/ThemeStyles'
 import GlobalStyles from '../styles/GlobalStyles'
 import {BiSun, BiMoon} from 'react-icons/bi'
+import "../styles/GlobalStyles.css"
 
 import DashboardLayout from "../Layouts/Dashboard.layout";
 import HomeLayout from "../Layouts/Home.layout";
