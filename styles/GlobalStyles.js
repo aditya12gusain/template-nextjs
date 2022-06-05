@@ -21,8 +21,11 @@ const GlobalStyle = createGlobalStyle`
 
   .themeButton{
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     position: fixed;
     right: 1rem;

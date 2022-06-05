@@ -2,6 +2,7 @@ import {useState} from 'react'
 import {ThemeProvider} from 'styled-components'
 import {light, dark} from '../styles/ThemeStyles'
 import GlobalStyles from '../styles/GlobalStyles'
+import {BiSun, BiMoon} from 'react-icons/bi'
 
 import DashboardLayout from "../Layouts/Dashboard.layout";
 import HomeLayout from "../Layouts/Home.layout";
@@ -19,8 +20,8 @@ const App = ({ Component, pageProps }) => {
       <Layout>
         <Component {...pageProps} />
       </Layout>
-      <button className='themeButton' onClick={() => theme === "light" ? setTheme('dark') : setTheme('light')}>
-        {theme === "light" ? "Dark" : "Light"}
+      <button className='themeButton  p8' onClick={() => theme === "light" ? setTheme('dark') : setTheme('light')}>
+        {theme === "light" ? <BiMoon className='iconSize16'/> : <BiSun className='iconSize16'/>}
       </button>
     </ThemeProvider>
   );

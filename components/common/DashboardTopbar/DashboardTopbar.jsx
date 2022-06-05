@@ -2,7 +2,7 @@ import {Container} from './DashboardTopbar.styles';
 
 const DashboardTopbar = () => {
     return(
-        <Container>TopBar</Container>
+        <Container className='p12 fw600 lsWide'>Home Page</Container>
     )
 }
 

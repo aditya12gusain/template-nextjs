@@ -5,8 +5,10 @@ export const Container = styled.div`
     height: 100vh;
     background: ${props => props.theme.subBackground};
     position: relative;
-    transition: all ease 200ms;
-
+    transition: all 200ms ease;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
     @media (max-width: 768px) {
         position: absolute;
     };
@@ -29,3 +31,96 @@ export const SidebarToggleButton = styled.button`
         box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.12), 0 1px 2px hsla(0, 0%, 0%,0.24);
     }
 `
+
+export const ProfileLink = styled.a`
+    height: 60px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 0 auto;
+    cursor: pointer;
+`
+
+export const ProfileImage = styled.img`
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    object-position: center;
+`
+
+export const SidebarMenuContainer = styled.div`
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+`
+
+export const MenuItem = styled.a`
+    width: 95%;
+    margin: 0 auto;
+    cursor: pointer;
+    padding: 6px 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: ${props => props.sidebarCollapsed ? "center" : "flex-start"};
+    color: ${props => props.theme.subColor};
+    border-radius: 4px;
+    gap: 0.5rem;
+    background: ${props => (props.pathName === props.linkName ? props.theme.background : null)};
+    
+    :hover{
+        background: ${props => props.theme.background}
+    }
+`
+
+
+export const DropdownContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    padding: 10px;
+    display: none;
+    background: ${props => props.theme.subBackground};
+    position: absolute;
+    z-index: 999;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 300ms ease;
+    border-radius: 5px;
+`
+
+export const MenuItemDropdown = styled.div`
+    width: 95%;
+    margin: 0 auto;
+    cursor: pointer;
+    padding: 6px 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: ${props => props.sidebarCollapsed ? "center" : "flex-start"};
+    color: ${props => props.theme.subColor};
+    border-radius: 4px;
+    gap: 0.5rem;
+    
+    :hover{
+        background: ${props => props.theme.background}
+    }
+
+    & ${DropdownContainer}:hover{
+        box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.12), 0 1px 2px hsla(0, 0%, 0%,0.24);
+    }
+
+    &:hover ${DropdownContainer}{
+        display: block;
+    }
+`
+
+
+// export const DropdownItem = styled.
